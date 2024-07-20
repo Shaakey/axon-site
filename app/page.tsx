@@ -81,7 +81,7 @@ export default function Home() {
           <ul className="text-gray-400 text-lg space-y-4">
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Created Executor</li>
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Updated UI</li>
-            <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/19/2024 - This API doesn"t want to work - Fixing API</li>
+            <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/19/2024 - This API doesn&apos;t want to work - Fixing API</li>
           </ul>
         </div>
       </div>
