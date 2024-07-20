@@ -1,9 +1,10 @@
 "use client"; 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image'; 
 
 export default function Features() {
   const [expandedFeature, setExpandedFeature] = useState<number | null>(null);
+  const featuresRef = useRef<HTMLDivElement | null>(null);
 
   const features = [
     { id: 1, title: 'Beautiful UI', description: 'An aesthetically pleasing, reliable and beautiful user interface.' },
@@ -17,37 +18,58 @@ export default function Features() {
     setExpandedFeature(expandedFeature === id ? null : id);
   };
 
+  const scrollToFeatures = () => {
+    featuresRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="bg-gray-900 min-h-screen font-sans text-gray-300">
       {/* Hero Section */}
-      <div className="flex items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900">
-        <div className="text-center p-12 bg-white shadow-2xl rounded-3xl max-w-3xl mx-4 relative overflow-hidden">
-          <Image
-            src="https://cdn.discordapp.com/attachments/1263457956096249917/1263482959047036949/kmeLhND.png?ex=669a65b3&is=66991433&hm=710a9db7f91257cb6762b9361bed05629d7a56b8026cf3b49bb449bef8406c19&g"
-            alt="Axon Product"
-            width={800}
-            height={500}
-            className="rounded-2xl"
-          />
-          <h1 className="text-5xl font-extrabold mt-8 text-gray-900 transition-transform duration-500 transform hover:scale-110 animate-pulse">Features</h1>
-          <p className="mt-4 text-lg text-gray-700">
-            Our top-notch executor offers you these exceptional features:
-          </p>
+      <div className="relative flex items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900">
+        <div className="flex items-center justify-between max-w-6xl mx-8 space-x-8">
+          {/* Text Content */}
+          <div className="text-left space-y-4">
+            <h1 className="text-5xl font-extrabold text-white transition-transform duration-500 transform hover:scale-110 animate-pulse">
+              Features
+            </h1>
+            <p className="text-lg text-gray-300">
+              Explore the exceptional features of Axon Executor and how it stands out in performance and usability.
+            </p>
+            {/* Scroll Down Button */}
+            <button
+              onClick={scrollToFeatures}
+              className="bg-blue-600 text-white py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition-colors transform hover:scale-105"
+            >
+              See Features
+            </button>
+          </div>
+          {/* Image */}
+          <div className="relative w-1/2">
+            <Image
+              src="https://cdn.discordapp.com/attachments/1263457956096249917/1263482959047036949/kmeLhND.png?ex=669a65b3&is=66991433&hm=710a9db7f91257cb6762b9361bed05629d7a56b8026cf3b49bb449bef8406c19&g"
+              alt="Axon Product"
+              width={800}
+              height={500}
+              className="rounded-2xl shadow-lg"
+            />
+          </div>
         </div>
       </div>
 
       {/* Features List Section */}
-      <div className="bg-gray-800 py-16">
+      <div ref={featuresRef} className="bg-gray-800 py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <ul className="text-center text-lg space-y-2">
+          <ul className="text-lg space-y-4">
             {features.map((feature) => (
               <li
                 key={feature.id}
-                className="transition-transform transform hover:scale-105 cursor-pointer"
+                className="cursor-pointer transition-transform transform hover:scale-105"
                 onClick={() => toggleFeature(feature.id)}
               >
-                <div className={`bg-gray-700 p-4 rounded-lg shadow-md transition-all duration-300 ${expandedFeature === feature.id ? 'bg-gray-600' : ''}`}>
-                  <p className="text-white font-semibold">{feature.title}</p>
+                <div className={`bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-300 ${expandedFeature === feature.id ? 'bg-gray-600' : ''}`}>
+                  <p className={`text-white font-semibold ${expandedFeature === feature.id ? 'text-blue-400' : ''}`}>
+                    {feature.title}
+                  </p>
                   {expandedFeature === feature.id && (
                     <p className="text-gray-300 mt-2">{feature.description}</p>
                   )}
@@ -57,7 +79,7 @@ export default function Features() {
           </ul>
         </div>
         <div className="flex justify-center py-8">
-          <a className="bg-blue-600 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-colors" href='/'>
+          <a className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105" href='/'>
             Return to Home
           </a>
         </div>

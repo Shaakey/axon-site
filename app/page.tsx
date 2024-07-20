@@ -14,39 +14,44 @@ export default function Home() {
       
       {/* Main Section */}
       <div className="relative flex items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900">
-        <div className="text-center p-12 bg-white shadow-2xl rounded-3xl max-w-4xl mx-4 relative overflow-hidden transform transition-transform duration-500 hover:scale-105">
-          <Image
-            src="https://cdn.discordapp.com/attachments/1263457956096249917/1263482959047036949/kmeLhND.png?ex=669a65b3&is=66991433&hm=710a9db7f91257cb6762b9361bed05629d7a56b8026cf3b49bb449bef8406c19&g"
-            alt="Axon Product"
-            width={800}
-            height={500}
-            className="rounded-2xl shadow-lg"
-          />
-          <h1 className="text-5xl font-extrabold mt-8 text-gray-900 transition-transform duration-500 transform hover:scale-110 animate-pulse">
-            Axon Executor
-          </h1>
-          <p className="mt-4 text-lg text-gray-700">
-            Discover the features that set Axon Executor apart from the rest.
-          </p>
-          <div className="mt-8 flex justify-center gap-6">
-            <a
-              className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
-              href="/download"
-            >
-              Download
-            </a>
-            <a
-              className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
-              href="/features"
-            >
-              Features
-            </a>
-            <a
-              className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
-              href="/contact"
-            >
-              Contact
-            </a>
+        <div className="flex items-center justify-between max-w-6xl mx-8 space-x-8">
+          <div className="text-left">
+            <h1 className="text-5xl font-extrabold text-white transition-transform duration-500 transform hover:scale-110 animate-pulse">
+              Welcome to Axon!
+            </h1>
+            <p className="mt-4 text-lg text-gray-300">
+              Discover the features that set Axon Executor apart from the rest.
+            </p>
+            <div className="mt-8 flex space-x-6">
+              <a
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
+                href="/download"
+              >
+                Download
+              </a>
+              <a
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
+                href="/features"
+              >
+                Features
+              </a>
+              <a
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
+                href="/contact"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+          <div className="relative w-1/2">
+            {/* Remove the blue gradient background and rotation effect */}
+            <Image
+              src="https://cdn.discordapp.com/attachments/1262401224825638992/1263898006898610229/W7kIBnu.png?ex=669be83e&is=669a96be&hm=ba2fcf5d689380dca4ca3083a5d58e9d7ccbab0093d6e55390c735675b7f06da&" // Use the path to your uploaded file here
+              alt="Axon Product"
+              width={800}
+              height={800}
+              className="relative rounded-2xl shadow-lg"
+            />
           </div>
         </div>
       </div>
@@ -68,7 +73,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="relative overflow-hidden rounded-2xl shadow-xl mb-12 transition-transform duration-500 hover:scale-105">
             <Image
-              src="https://cdn.discordapp.com/attachments/1263457956096249917/1263472461773668433/image.png?ex=669a5bed&is=66990a6d&hm=068fd2772dc48c1ffecd4d39db889f12e12bd23cfb6809e47d9221b2fe27a46f&"
+              src="https://cdn.discordapp.com/attachments/1263890433298403399/1263890645337247846/Qb2bnKw.png?ex=669be163&is=669a8fe3&hm=ec5d7d9420aab063b2c4c274a21694614b523cf7e0d890793c236a2192b1034c&" // Use the path to your uploaded file here
               alt="Axon Product"
               width={500}
               height={500}
@@ -81,6 +86,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
