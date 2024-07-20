@@ -72,6 +72,11 @@ export default function Contact() {
             Return to Home
           </a>
       </div>
+      <br />
+      <br />
+      <br />
+      <h1 className="font-bold text-white text-lg align-middle justify-center flex items-center">This website was made by monokai.pro - Co-Owner of Vortex</h1>
+
     </div>
   );
 }

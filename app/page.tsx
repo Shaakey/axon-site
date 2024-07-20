@@ -7,9 +7,9 @@ export default function Home() {
   const faqRef = useRef<HTMLDivElement | null>(null);
 
   const faqs = [
-    { id: 1, question: "What is Axon Executor?", answer: "Axon is a level 6, top-tier roblox script execution tool." },
-    { id: 2, question: "How do I install Axon Executor?", answer: "At the top, you will see a button which is called Download. Click on download, and it will take you to our download page." },
-    { id: 3, question: "Is there a free version of Axon?", answer: "We are completely free, if you paid for this you have sadly been scammed. Request a refund immediately." },
+    { id: 1, question: "What is Vortex Executor?", answer: "Vortex is a level 6, top-tier roblox script execution tool." },
+    { id: 2, question: "How do I install Vortex Executor?", answer: "At the top, you will see a button which is called Download. Click on download, and it will take you to our download page." },
+    { id: 3, question: "Is there a free version of Vortex?", answer: "We are completely free, if you paid for this you have sadly been scammed. Request a refund immediately." },
     { id: 4, question: "How can I contact support?", answer: "You may contact us during our contact page. Scroll up and click on Contact and you will see our contact methods." },
   ];
 
@@ -37,10 +37,10 @@ export default function Home() {
         <div className="flex items-center justify-between max-w-6xl mx-8 space-x-8">
           <div className="text-left">
             <h1 className="text-5xl font-extrabold text-white transition-transform duration-500 transform hover:scale-110 animate-pulse">
-              Welcome to Axon!
+              Welcome to Vortex!
             </h1>
             <p className="mt-4 text-lg text-gray-300">
-              Discover the features that set Axon Executor apart from the rest.
+              Discover the features that set Vortex Executor apart from the rest.
             </p>
             <div className="mt-8 flex space-x-6">
               <a
@@ -62,11 +62,14 @@ export default function Home() {
                 Contact
               </a>
             </div>
+            <p className="mt-4 text-lg text-gray-300">
+                Status: DOWN ⛔️
+            </p>
           </div>
           <div className="relative w-1/2">
             <Image
               src="https://cdn.discordapp.com/attachments/1262401224825638992/1263898006898610229/W7kIBnu.png?ex=669be83e&is=669a96be&hm=ba2fcf5d689380dca4ca3083a5d58e9d7ccbab0093d6e55390c735675b7f06da&"
-              alt="Axon Product"
+              alt="Vortex Product"
               width={800}
               height={800}
               className="relative rounded-2xl shadow-lg"
@@ -92,14 +95,14 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-2xl shadow-xl mb-12 transition-transform duration-500 hover:scale-105">
             <Image
               src="https://cdn.discordapp.com/attachments/1263890433298403399/1263890645337247846/Qb2bnKw.png?ex=669be163&is=669a8fe3&hm=ec5d7d9420aab063b2c4c274a21694614b523cf7e0d890793c236a2192b1034c&"
-              alt="Axon Product"
+              alt="Vortex Product"
               width={500}
               height={500}
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center transition-opacity duration-300 hover:bg-opacity-60">
               <p className="text-white text-lg font-sans font-semibold max-w-xl p-6 bg-gray-900 bg-opacity-90 rounded-2xl shadow-lg">
-                Axon stands out with its seamless functionality and reliability. Crafted by expert C# coder, <b>V4Z</b>, it’s a level 6 executor that outperforms the rest.
+                Vortex stands out with its seamless functionality and reliability. Crafted by expert C# coder, <b>V4Z</b>, it’s a level 6 executor that outperforms the rest.
               </p>
             </div>
           </div>
@@ -129,6 +132,9 @@ export default function Home() {
             ))}
           </ul>
           </div>
+          <br />
+          <br />
+          <h1 className="font-bold text-white text-lg">This website was made by monokai.pro - Co-Owner of Vortex</h1>
       </div>
     </div>
   );

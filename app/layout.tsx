@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Axon I Roblox Executor",
+  title: "Vortex I Roblox Executor",
   description: "This is the best executor on the market right now.",
 };
 

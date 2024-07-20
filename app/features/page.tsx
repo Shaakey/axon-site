@@ -33,7 +33,7 @@ export default function Features() {
               Features
             </h1>
             <p className="text-lg text-gray-300">
-              Explore the exceptional features of Axon Executor and how it stands out in performance and usability.
+              Explore the exceptional features of Vortex Executor and how it stands out in performance and usability.
             </p>
             {/* Scroll Down Button */}
             <button
@@ -47,7 +47,7 @@ export default function Features() {
           <div className="relative w-1/2">
             <Image
               src="https://cdn.discordapp.com/attachments/1263457956096249917/1263482959047036949/kmeLhND.png?ex=669a65b3&is=66991433&hm=710a9db7f91257cb6762b9361bed05629d7a56b8026cf3b49bb449bef8406c19&g"
-              alt="Axon Product"
+              alt="Vortex Product"
               width={800}
               height={500}
               className="rounded-2xl shadow-lg"
@@ -83,7 +83,11 @@ export default function Features() {
             Return to Home
           </a>
         </div>
+          <br />
+          <br />
+          <h1 className="font-bold text-white text-lg align-middle justify-center flex items-center">This website was made by monokai.pro - Co-Owner of Vortex</h1>
       </div>
+      
     </div>
   );
 }
