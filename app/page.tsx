@@ -1,16 +1,16 @@
 "use client"; 
-import React, { useState, useRef } from 'react';
-import Image from 'next/image'; 
+import React, { useState, useRef } from "react";
+import Image from "next/image"; 
 
 export default function Home() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const faqRef = useRef<HTMLDivElement | null>(null);
 
   const faqs = [
-    { id: 1, question: 'What is Axon Executor?', answer: 'IN WORK' },
-    { id: 2, question: 'How do I install Axon Executor?', answer: 'IN WORK' },
-    { id: 3, question: 'Is there a free version of Axon?', answer: 'IN WORK' },
-    { id: 4, question: 'How can I contact support?', answer: 'IN WORK' },
+    { id: 1, question: "What is Axon Executor?", answer: "IN WORK" },
+    { id: 2, question: "How do I install Axon Executor?", answer: "IN WORK" },
+    { id: 3, question: "Is there a free version of Axon?", answer: "IN WORK" },
+    { id: 4, question: "How can I contact support?", answer: "IN WORK" },
   ];
 
   const toggleFAQ = (id: number) => {
@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   const scrollToFAQ = () => {
-    faqRef.current?.scrollIntoView({ behavior: 'smooth' });
+    faqRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -81,7 +81,7 @@ export default function Home() {
           <ul className="text-gray-400 text-lg space-y-4">
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Created Executor</li>
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Updated UI</li>
-            <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/19/2024 - This API doesn't want to work - Fixing API</li>
+            <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/19/2024 - This API doesn"t want to work - Fixing API</li>
           </ul>
         </div>
       </div>
@@ -117,8 +117,8 @@ export default function Home() {
                 className="cursor-pointer transition-transform transform hover:scale-105"
                 onClick={() => toggleFAQ(faq.id)}
               >
-                <div className={`bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-300 ${expandedFAQ === faq.id ? 'bg-gray-600' : ''}`}>
-                  <p className={`text-white font-semibold ${expandedFAQ === faq.id ? 'text-blue-400' : ''}`}>
+                <div className={`bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-300 ${expandedFAQ === faq.id ? "bg-gray-600" : ""}`}>
+                  <p className={`text-white font-semibold ${expandedFAQ === faq.id ? "text-blue-400" : ""}`}>
                     {faq.question}
                   </p>
                   {expandedFAQ === faq.id && (
