@@ -1,6 +1,26 @@
-import Image from 'next/image';
+"use client"; 
+import React, { useState, useRef } from 'react';
+import Image from 'next/image'; 
 
 export default function Home() {
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const faqRef = useRef<HTMLDivElement | null>(null);
+
+  const faqs = [
+    { id: 1, question: 'What is Axon Executor?', answer: 'IN WORK' },
+    { id: 2, question: 'How do I install Axon Executor?', answer: 'IN WORK' },
+    { id: 3, question: 'Is there a free version of Axon?', answer: 'IN WORK' },
+    { id: 4, question: 'How can I contact support?', answer: 'IN WORK' },
+  ];
+
+  const toggleFAQ = (id: number) => {
+    setExpandedFAQ(expandedFAQ === id ? null : id);
+  };
+
+  const scrollToFAQ = () => {
+    faqRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="bg-gray-900 min-h-screen font-sans text-gray-300">
       <div className="absolute inset-0">
@@ -24,19 +44,19 @@ export default function Home() {
             </p>
             <div className="mt-8 flex space-x-6">
               <a
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-2xl shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
                 href="/download"
               >
                 Download
               </a>
               <a
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-2xl shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
                 href="/features"
               >
                 Features
               </a>
               <a
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-2xl shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105"
                 href="/contact"
               >
                 Contact
@@ -44,9 +64,8 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-1/2">
-            {/* Remove the blue gradient background and rotation effect */}
             <Image
-              src="https://cdn.discordapp.com/attachments/1262401224825638992/1263898006898610229/W7kIBnu.png?ex=669be83e&is=669a96be&hm=ba2fcf5d689380dca4ca3083a5d58e9d7ccbab0093d6e55390c735675b7f06da&" // Use the path to your uploaded file here
+              src="https://cdn.discordapp.com/attachments/1262401224825638992/1263898006898610229/W7kIBnu.png?ex=669be83e&is=669a96be&hm=ba2fcf5d689380dca4ca3083a5d58e9d7ccbab0093d6e55390c735675b7f06da&"
               alt="Axon Product"
               width={800}
               height={800}
@@ -56,25 +75,23 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Changelog Section */}
       <div className="bg-gray-800 text-center py-16">
         <h2 className="text-4xl font-bold text-white mb-8 animate-fadeIn">Changelog</h2>
         <div className="max-w-4xl mx-auto">
           <ul className="text-gray-400 text-lg space-y-4">
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Created Executor</li>
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Updated UI</li>
-            <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/19/2024 - This fucking API doesnt wanna work - Fixing api</li>
+            <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/19/2024 - This API doesn't want to work - Fixing API</li>
           </ul>
         </div>
       </div>
 
-      {/* Why We’re Special Section */}
       <div className="bg-gray-900 text-center py-20">
         <h2 className="text-4xl font-bold text-white mb-12 animate-bounce">Why We’re Special</h2>
         <div className="max-w-4xl mx-auto px-4">
           <div className="relative overflow-hidden rounded-2xl shadow-xl mb-12 transition-transform duration-500 hover:scale-105">
             <Image
-              src="https://cdn.discordapp.com/attachments/1263890433298403399/1263890645337247846/Qb2bnKw.png?ex=669be163&is=669a8fe3&hm=ec5d7d9420aab063b2c4c274a21694614b523cf7e0d890793c236a2192b1034c&" // Use the path to your uploaded file here
+              src="https://cdn.discordapp.com/attachments/1263890433298403399/1263890645337247846/Qb2bnKw.png?ex=669be163&is=669a8fe3&hm=ec5d7d9420aab063b2c4c274a21694614b523cf7e0d890793c236a2192b1034c&"
               alt="Axon Product"
               width={500}
               height={500}
@@ -87,7 +104,31 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
 
+      {/* FAQ Section */}
+      <div ref={faqRef} className="bg-gray-800 text-center py-16">
+        <h2 className="text-4xl font-bold text-white mb-8 animate-fadeIn">FAQ</h2>
+        <div className="max-w-4xl mx-auto px-4">
+          <ul className="text-gray-400 text-lg space-y-4">
+            {faqs.map((faq) => (
+              <li
+                key={faq.id}
+                className="cursor-pointer transition-transform transform hover:scale-105"
+                onClick={() => toggleFAQ(faq.id)}
+              >
+                <div className={`bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-300 ${expandedFAQ === faq.id ? 'bg-gray-600' : ''}`}>
+                  <p className={`text-white font-semibold ${expandedFAQ === faq.id ? 'text-blue-400' : ''}`}>
+                    {faq.question}
+                  </p>
+                  {expandedFAQ === faq.id && (
+                    <p className="text-gray-300 mt-2">{faq.answer}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+          </div>
       </div>
     </div>
   );
