@@ -63,7 +63,8 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-4 text-lg text-gray-300">
-                Status: UP ✅
+                Status: WORKING 🟢 
+                      {/* 🔴🟠🟢 */}
             </p>
           </div>
           <div className="relative w-1/2">
