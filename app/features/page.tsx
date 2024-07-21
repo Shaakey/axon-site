@@ -10,7 +10,7 @@ export default function Features() {
     { id: 1, title: 'Beautiful UI', description: 'An aesthetically pleasing, reliable and beautiful user interface.' },
     { id: 2, title: 'Multiple Tabs', description: 'Get more tabs, so you can execute more scripts without having to paste it in.' },
     { id: 3, title: 'Good Inject', description: 'Efficient and reliable code injection for executing your scripts flawlessly.' },
-    { id: 4, title: 'Level 6 Executor', description: 'Top-tier executor with advanced capabilities and performance.' },
+    { id: 4, title: 'Level 3 Executor', description: 'Top-tier executor with advanced capabilities and performance.' },
     { id: 5, title: 'Pre-installed Scripts', description: 'Comes with a variety of pre-installed scripts to get you started quickly.' },
   ];
 

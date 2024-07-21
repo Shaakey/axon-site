@@ -7,7 +7,7 @@ export default function Home() {
   const faqRef = useRef<HTMLDivElement | null>(null);
 
   const faqs = [
-    { id: 1, question: "What is Vortex Executor?", answer: "Vortex is a level 6, top-tier roblox script execution tool." },
+    { id: 1, question: "What is Vortex Executor?", answer: "Vortex is a level 3, top-tier roblox script execution tool." },
     { id: 2, question: "How do I install Vortex Executor?", answer: "At the top, you will see a button which is called Download. Click on download, and it will take you to our download page." },
     { id: 3, question: "Is there a free version of Vortex?", answer: "We are completely free, if you paid for this you have sadly been scammed. Request a refund immediately." },
     { id: 4, question: "How can I contact support?", answer: "You may contact us during our contact page. Scroll up and click on Contact and you will see our contact methods." },

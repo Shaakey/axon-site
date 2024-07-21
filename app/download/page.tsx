@@ -16,7 +16,7 @@ export default function Download() {
 
       {/* Download Button */}
       <div className="flex items-center justify-center mb-8">
-          <a className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105" href='https://youtube.com'>
+          <a className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition-transform duration-500 hover:scale-105" href='https://cdn.discordapp.com/attachments/1263566352518746243/1264391842707800116/VortexRelease.zip?ex=669db42a&is=669c62aa&hm=dc44f9ebf1a5a6c7b784601ed80ecb4f492baf1c629cb0125a9935d476816d14&'>
             Download Now
           </a>
       </div>
