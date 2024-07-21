@@ -63,12 +63,12 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-4 text-lg text-gray-300">
-                Status: DOWN ⛔️
+                Status: UP ✅
             </p>
           </div>
           <div className="relative w-1/2">
             <Image
-              src="https://cdn.discordapp.com/attachments/1262401224825638992/1263898006898610229/W7kIBnu.png?ex=669be83e&is=669a96be&hm=ba2fcf5d689380dca4ca3083a5d58e9d7ccbab0093d6e55390c735675b7f06da&"
+              src="https://cdn.discordapp.com/attachments/1263815444331102228/1264474644015222845/oEGyGs4.png?ex=669e0147&is=669cafc7&hm=ae29c314b020ac788187e3b06701e6cdabe03622586e56878b877c2bc043d1c4&"
               alt="Vortex Product"
               width={800}
               height={800}
