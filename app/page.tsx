@@ -85,6 +85,8 @@ export default function Home() {
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Created Executor</li>
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/18/2024 - Updated UI</li>
             <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/19/2024 - This API doesn&apos;t want to work - Fixing API</li>
+            <li className="transition-all duration-300 hover:text-white hover:translate-x-2 animate-fadeIn">7/21/2024 - Released Vortex Executor!</li>
+
           </ul>
         </div>
       </div>
@@ -94,7 +96,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="relative overflow-hidden rounded-2xl shadow-xl mb-12 transition-transform duration-500 hover:scale-105">
             <Image
-              src="https://cdn.discordapp.com/attachments/1263890433298403399/1263890645337247846/Qb2bnKw.png?ex=669be163&is=669a8fe3&hm=ec5d7d9420aab063b2c4c274a21694614b523cf7e0d890793c236a2192b1034c&"
+              src="https://cdn.discordapp.com/attachments/1263815444331102228/1264477516542771221/aDfO2EX.png?ex=669e03f4&is=669cb274&hm=3e322eb0b5579f453e09660c34234538a9d5709ce06b9544e7e3d3480e85cd5c&"
               alt="Vortex Product"
               width={500}
               height={500}
@@ -102,7 +104,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center transition-opacity duration-300 hover:bg-opacity-60">
               <p className="text-white text-lg font-sans font-semibold max-w-xl p-6 bg-gray-900 bg-opacity-90 rounded-2xl shadow-lg">
-                Vortex stands out with its seamless functionality and reliability. Crafted by expert C# coder, <b>V4Z</b>, it’s a level 6 executor that outperforms the rest.
+                Vortex stands out with its seamless functionality and reliability. Crafted by expert C# coder, <b>V4Z</b>, it’s a level 3 executor that outperforms the rest.
               </p>
             </div>
           </div>
